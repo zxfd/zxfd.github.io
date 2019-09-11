@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>三种元素类型</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+  <script src='main.js'></script>
+  <style>
+    body{
+      margin:0; 
+    }
+    
+    div{
+      background-color: gold;
+      text-align: center;
+      margin: 10px 0;
+    }
+    .box2{
+      width: 200px;
+    }
+    .box3{
+      width: 300px;
+    }
+    .com a{
+      background-color: bisque;
+      /* width:500px; */
+      /* height: 300px;  宽和高不起作用，完全靠自己的内容撑起*/
+      margin-left: 50px;
+      margin-top: 50px;
+
+    }
+  </style>
+</head>
+<body>
+  <div>
+    这是一个div元素;若不设置宽度，默认为父级的宽度（此处body的100%）
+  </div>
+  <div class="box2">
+    第二个div元素
+  </div>
+  <div class="box2">第三个div元素</div>
+  <div class='con'>
+    <a href="#">第一个a标签</a>
+    <a href="#">第二个a标签</a>
+    <a href="#">第三个a标签</a>
+    
+  </div>
+  <p>
+      内联元素，也可以称为行内元素，布局中常用的标签如：a、span、em、b、strong、i等等都是内联元素，它们在布局中的行为：
+
+      支持部分样式（不支持宽、高、margin上下、padding上下）
+      宽高由内容决定
+      盒子并在一行
+      代码换行，盒子之间会产生间距
+      子元素是内联元素，父元素可以用text-align属性设置子元素水平对齐方式，用line-height属性值设置垂直对齐方式
+  </p>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>margin-top塌陷</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+  <script src='main.js'></script>
+  <style>
+  .con{
+    width: 300px;
+    height: 200px;
+    background-color: gold;
+    /* line-height: 200px;   无法使盒子居中，只对文本有用 */
+    /* margin-top: 50px; */
+    /* 这就是margin-top塌陷bug */
+    /* border: 1px solid gold; 这是第一种解塌陷bug的方法*/
+    /* overflow: hidden; 这是第二种解塌陷bug的方法-元素溢出*/
+
+  }
+  .box{
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    margin-top: 50px;
+  }
+  .clearfix:before{
+    content: "";
+    display: table;
+  }
+  /* 这是最好用的方法-伪元素类 */
+  </style>
+</head>
+<body>
+  <div class="con clearfix">
+    <div class="box">
+
+    </div>
+  </div>
+</body>
+</html>

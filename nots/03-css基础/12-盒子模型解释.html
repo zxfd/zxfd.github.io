@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>css盒子模型</title>
+  <style type="text/css">
+    .box{
+      width: 200px;
+      height: 100px;
+      background-color: gold;
+      border-top-width: 10px;
+      border-top-color: black;
+      border-top-style: solid;
+      /* 线的类型：实线solid 虚线dashed 点线dotted */
+      border-left: 10px dashed #000000;
+      border-bottom: 10px dotted #bbbbbb;
+      border-right: 10px solid #333;
+      /* border: 10px solid #333 直接设置4边，先设置的会被覆盖掉*/
+      padding-top: 10px;
+      /* 会把盒子撑大 */
+      padding-left: 40px;
+      padding-right: 100px;
+      padding-bottom: 200px;
+      /* padding: 10px 100px 200px 40px; */
+      /* padding的设置4个值需按顺时针的顺序来；
+      若只设置三个，则顺序为：上 左右 下；
+      若只设置两个，则顺序为：上下 左右*/
+      /* margin-top: 50px;
+      margin-left: 40px;
+      margin-right: 200px; */
+      /* 因为右边和下面没东西，所以设置了也没用 */
+      /* margin垂直方向会自动合并，所以margin-top与margin-bottom相遇时，间距取大者 */
+      /* margin设置顺序同padding */
+      margin: 100px auto;
+      /* auto会让他自动水平居中 */
+    }
+  </style>
+</head>
+<body>
+  <div class="box">元素在页面中显示成一个方块，类似一个盒子，
+    CSS盒子模型就是使用现实中盒子来做比喻，
+    帮助我们设置元素对应的样式。
+    这就是盒子模型示意图</div>
+  <div>
+    盒子的width实际是内容的尺寸；盒子的实际宽度为width+左右padding+左右border；
+    盒子的实际高度为height+上下padding+上下border
+  </div>
+</body>
+</html>

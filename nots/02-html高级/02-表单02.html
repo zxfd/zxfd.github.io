@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>表单</title>
+</head>
+<body>
+	<form action="http://www.itcast.cn" method="post">
+		<div>
+			<label for="username" >用户名：(可点文字)</label>
+			<input type="text" name="username" id="username" >
+			
+		</div>
+		<br>
+		
+		<div>
+			<label>密码：get方式提交直接在地址栏传输，post通过http协议提交</label>
+			<input type="password" name="pwd">
+		</div>
+		<br>
+		<div>
+			<label>性别：</label> 
+			<input type="radio" name="gender" id="male" value="0"> <label for="male">男</label> 
+			<input type="radio" name="gender" id="female" value="1"> <label for="female">女</label>
+		</div>
+		<br>
+		<div>
+			<label>爱好：</label>
+			<input type="checkbox" name="like" value="sport">运动
+			<input type="checkbox" name="like" value="read">阅读
+			<input type="checkbox" name="like" value="game">游戏
+			
+		</div>
+		<br>
+		<div>
+			<label>籍贯：</label>
+			<select name="site">
+				<option value="0">北京</option>
+				<option value="1">上海</option>
+				<option value="2">广东</option>
+			</select>
+		</div> 
+		<br>
+		<label>照片：</label>
+		<input type="file" name="img" >
+		<br>
+		<div>
+			<label>自我介绍:</label>
+			<textarea name="info"></textarea>
+
+		</div>
+		<br>
+		<input type="submit" name="" value="提交">
+		<input type="reset" name="" value="全部重置"> 
+		<input type="button" name="" value="按钮">
+		<input type="image" name="" src="../images/picstyle02.jpg"> <!--一般不建议，会出现向服务器提交两次的bug -->
+		<input type="hidden" name="存一些从数据库得到的值，比如用于将该值加减" value="10000">
+
+
+	</form>
+
+
+
+</body>
+</html>

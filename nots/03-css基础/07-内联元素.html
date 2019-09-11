@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>内联元素</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+  <script src='main.js'></script>
+  <style type="text/css">
+  .con,.con2{
+    width: 500px;
+    height: 300px;
+    border: 1px solid #333;
+    margin: 50px auto 0;
+    font-size: 0;
+  }
+  .con a,.con2 a{
+    color: black;
+    background-color: gold;
+    font-size: 15px;
+    /* width: 30px;
+    height: 50px; 无效，其宽与高由内容决定*/
+    /* margin-left: 30px;支持  */
+    /* margin-top: 50px;不起作用 */
+    /* margin-bottom: 50px;不起作用 */
+    padding: 0px 0px;/*实际padding上下不起作用，有bug所以会把背景色撑开 */
+  }
+  .con2{
+    text-align: center;
+    line-height: 300px;  /*设置的垂直居中*/
+  }
+  </style>
+</head>
+<body>
+    <!-- <a href="#">这是第1个a标签</a>
+    <a href="#">这是第2个a标签</a>  同样的效果-->
+  <div class="con">
+    <a href="#">这是第1个a标签这是第1个a标签</a>
+    <a href="#">这是第2个a标签</a>
+    <a href="#">这是第3个a标签</a>
+    <a href="#">这是第4个a标签</a>
+    <a href="#">这是第5个a标签</a><a href="#">盒子内的东西排成一行，代码换行会产生间距</a>
+    <a href="#">解决办法是不换行，或者将父级的font-size设置为0，内联元素再自行设置font-size,一般用第二种办法</a>
+  </div>
+  <div class="con2">
+      <a href="#">这是第1个a标签这是第1个a标签</a>
+      <a href="#">让内联元素相对父级水平居中，可以将父级的text-align设置为center</a>
+      <a href="#">这是第3个a标签</a>
+      
+    </div>
+  
+</body>
+</html>
